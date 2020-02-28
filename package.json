@@ -1,0 +1,57 @@
+{
+  "name": "repa-widget",
+  "version": "1.0.0",
+  "description": "Repa Widget - Widget base for BE/FE rendered widgets",
+  "main": "js/all.js",
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "core-js": "^3.6.4",
+    "cssnano": "^4.1.10",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "jsdoc": "^3.6.3",
+    "jsdoc-to-markdown": "^5.0.3",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.1",
+    "prettier": "^1.19.1",
+    "regenerator-runtime": "^0.13.3",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "snowpack": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snowpack": "snowpack",
+    "build": "eslint js && gulp bundle",
+    "watch": "gulp watch",
+    "lint": "eslint js",
+    "jsdoc": "jsdoc -c ./jsdoc.conf js/**/*.js -d doc",
+    "jsdoc2md": "jsdoc2md --clear; jsdoc2md -c ./jsdoc.conf js/**/*js > DOCS.md",
+    "prettier": "prettier"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyuri/repa-widget.git"
+  },
+  "author": "Gyuri Horak <dyuri@horak.hu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dyuri/repa-widget/issues"
+  },
+  "homepage": "https://github.com/dyuri/repa-widget"
+}
