@@ -7,7 +7,7 @@ const commonjs = require("rollup-plugin-commonjs");
 const terser = require("rollup-plugin-terser").terser;
 const rename = require("gulp-rename");
 const postcss = require("gulp-postcss");
-const cssnext = require("postcss-cssnext");
+const postcssPresetEnv = require('postcss-preset-env');
 const cssimport = require("postcss-import");
 const cssnano = require("cssnano");
 
@@ -84,7 +84,12 @@ gulp.task("js-babel-sm", () => {
 gulp.task("css-nosm", () => {
   return gulp
     .src("css/*.css")
-    .pipe(postcss([cssimport, cssnext, cssnano]))
+    .pipe(
+      postcss([
+        cssimport,
+        postcssPresetEnv(),
+        cssnano
+      ]))
     .pipe(gulp.dest("bundle"));
 });
 
@@ -92,7 +97,12 @@ gulp.task("css-sm", () => {
   return gulp
     .src("css/*.css")
     .pipe(sourcemaps.init())
-    .pipe(postcss([cssimport, cssnext, cssnano]))
+    .pipe(
+      postcss([
+        cssimport,
+        postcssPresetEnv(),
+        cssnano
+      ]))
     .pipe(sourcemaps.write())
     .pipe(rename({ suffix: ".sm" }))
     .pipe(gulp.dest("bundle"));
