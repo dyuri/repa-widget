@@ -21,7 +21,7 @@
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^2.6.5",
-    "jsdoc": "^3.6.11",
+    "jsdoc": "^4.0.5",
     "jsdoc-to-markdown": "^8.0.0",
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^9.1.4",
